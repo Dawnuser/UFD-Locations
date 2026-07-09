@@ -23,10 +23,6 @@ Each category shows the first 2 locations by default. Tap **Show all (N more)** 
 - Mobile-first, 520px max-width
 - Google Maps directions via `maps.google.com/maps/dir/`
 
-## Adding Locations
-
-Edit the HTML files and push to GitHub. The NFC tag URL stays the same.
-
 ## Tech
 
 Single-file HTML, CSS, JS. No frameworks, no build step.
