@@ -68,7 +68,7 @@ h1{font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;text-wrap:balance;col
 .location-card:hover .card-arrow{color:var(--primary);transform:translateX(3px)}
 footer{text-align:center;padding:32px 0 48px;font-size:0.8125rem;color:var(--muted);transition:color var(--transition);letter-spacing:0.02em}
 footer span{color:var(--primary);font-weight:500}
-.collapse-wrap{overflow:hidden}
+.collapse-wrap{overflow:hidden;display:flex;flex-direction:column;gap:8px}
 .collapse-inner{max-height:0;overflow:hidden;display:flex;flex-direction:column;gap:8px;transition:max-height 0.25s ease-out}
 .collapse-wrap.is-open .collapse-inner{max-height:2000px}
 .collapse-toggle{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:11px 16px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--muted);font-size:0.8125rem;font-weight:500;cursor:pointer;transition:background var(--transition),color var(--transition),border-color var(--transition);-webkit-tap-highlight-color:transparent;outline:none;font-family:inherit}
