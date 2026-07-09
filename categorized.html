@@ -68,6 +68,14 @@ h1{font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;text-wrap:balance;col
 .location-card:hover .card-arrow{color:var(--primary);transform:translateX(3px)}
 footer{text-align:center;padding:32px 0 48px;font-size:0.8125rem;color:var(--muted);transition:color var(--transition);letter-spacing:0.02em}
 footer span{color:var(--primary);font-weight:500}
+.collapse-wrap{overflow:hidden}
+.collapse-inner{max-height:0;overflow:hidden;display:flex;flex-direction:column;gap:8px;transition:max-height 0.25s ease-out}
+.collapse-wrap.is-open .collapse-inner{max-height:2000px}
+.collapse-toggle{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:11px 16px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--muted);font-size:0.8125rem;font-weight:500;cursor:pointer;transition:background var(--transition),color var(--transition),border-color var(--transition);-webkit-tap-highlight-color:transparent;outline:none;font-family:inherit}
+.collapse-toggle:hover{background:var(--surface-hover);color:var(--primary);border-color:var(--primary-glare)}
+.collapse-toggle:focus-visible{box-shadow:0 0 0 2px var(--primary),0 0 0 4px var(--bg)}
+.collapse-toggle .chevron{width:16px;height:16px;transition:transform 0.25s ease-out}
+.collapse-wrap.is-open .chevron{transform:rotate(180deg)}
 @media(max-width:400px){.container{padding:32px 0 24px}h1{font-size:1.375rem}.location-card{padding:11px 14px}.section-header .emoji{width:32px;height:32px;font-size:1.125rem}}
 </style>
 </head>
@@ -85,7 +93,7 @@ footer span{color:var(--primary);font-weight:500}
 <div class="section-header">
 <span class="emoji">🏠</span>
 <h2>House Addresses</h2>
-<span class="count">4</span>
+<span class="count">5</span>
 </div>
 <div class="locations" role="list">
 <a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.6889954,73.0103378" target="_blank" rel="noopener">
@@ -98,10 +106,12 @@ footer span{color:var(--primary);font-weight:500}
 <a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.6247557,73.1018173" target="_blank" rel="noopener">
 <span class="card-icon">📍</span>
 <span class="card-body">
-<span class="card-title">Muzammil Phupo's House</span>
+    <span class="card-title">Muzammil Phupo's House</span>
 </span>
 <span class="card-arrow">→</span>
 </a>
+<div class="collapse-wrap">
+<div class="collapse-inner">
 <a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=Rawalpindi+Pakistan" target="_blank" rel="noopener">
 <span class="card-icon">📍</span>
 <span class="card-body">
@@ -116,6 +126,19 @@ footer span{color:var(--primary);font-weight:500}
 </span>
 <span class="card-arrow">→</span>
 </a>
+<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=32.0978127,74.8983154" target="_blank" rel="noopener">
+<span class="card-icon">📍</span>
+<span class="card-body">
+<span class="card-title">Malik Saeed Sahib's House</span>
+</span>
+<span class="card-arrow">→</span>
+</a>
+</div>
+<button class="collapse-toggle" aria-expanded="false">
+<span class="toggle-label">Show all (3 more)</span>
+<svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+</div>
 </div>
 </section>
 
@@ -136,10 +159,12 @@ footer span{color:var(--primary);font-weight:500}
 <a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.5963726,73.0445337" target="_blank" rel="noopener">
 <span class="card-icon">📍</span>
 <span class="card-body">
-<span class="card-title">AFIO</span>
+    <span class="card-title">AFIO</span>
 </span>
 <span class="card-arrow">→</span>
 </a>
+<div class="collapse-wrap">
+<div class="collapse-inner">
 <a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.677563,73.0658436" target="_blank" rel="noopener">
 <span class="card-icon">📍</span>
 <span class="card-body">
@@ -155,6 +180,12 @@ footer span{color:var(--primary);font-weight:500}
 <span class="card-arrow">→</span>
 </a>
 </div>
+<button class="collapse-toggle" aria-expanded="false">
+<span class="toggle-label">Show all (2 more)</span>
+<svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+</div>
+</div>
 </section>
 
 <section class="section">
@@ -164,27 +195,6 @@ footer span{color:var(--primary);font-weight:500}
 <span class="count">5</span>
 </div>
 <div class="locations" role="list">
-<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.4907565,73.0977211" target="_blank" rel="noopener">
-<span class="card-icon">📍</span>
-<span class="card-body">
-<span class="card-title">Rainbow Hypermarket</span>
-</span>
-<span class="card-arrow">→</span>
-</a>
-<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.5034012,73.095771" target="_blank" rel="noopener">
-<span class="card-icon">📍</span>
-<span class="card-body">
-<span class="card-title">Rafi Hypermarket</span>
-</span>
-<span class="card-arrow">→</span>
-</a>
-<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.5245599,73.0974825" target="_blank" rel="noopener">
-<span class="card-icon">📍</span>
-<span class="card-body">
-<span class="card-title">Al Fateh</span>
-</span>
-<span class="card-arrow">→</span>
-</a>
 <a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.543387,73.1230871" target="_blank" rel="noopener">
 <span class="card-icon">📍</span>
 <span class="card-body">
@@ -199,6 +209,35 @@ footer span{color:var(--primary);font-weight:500}
 </span>
 <span class="card-arrow">→</span>
 </a>
+<div class="collapse-wrap">
+<div class="collapse-inner">
+<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.5245599,73.0974825" target="_blank" rel="noopener">
+<span class="card-icon">📍</span>
+<span class="card-body">
+<span class="card-title">Al Fateh</span>
+</span>
+<span class="card-arrow">→</span>
+</a>
+<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.4907565,73.0977211" target="_blank" rel="noopener">
+<span class="card-icon">📍</span>
+<span class="card-body">
+<span class="card-title">Rainbow Hypermarket</span>
+</span>
+<span class="card-arrow">→</span>
+</a>
+<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.5034012,73.095771" target="_blank" rel="noopener">
+<span class="card-icon">📍</span>
+<span class="card-body">
+<span class="card-title">Rafi Hypermarket</span>
+</span>
+<span class="card-arrow">→</span>
+</a>
+</div>
+<button class="collapse-toggle" aria-expanded="false">
+<span class="toggle-label">Show all (3 more)</span>
+<svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+</div>
 </div>
 </section>
 
@@ -206,7 +245,7 @@ footer span{color:var(--primary);font-weight:500}
 <div class="section-header">
 <span class="emoji">🕊️</span>
 <h2>Kabristan</h2>
-<span class="count">3</span>
+<span class="count">6</span>
 </div>
 <div class="locations" role="list">
 <a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.5660439,73.0964432" target="_blank" rel="noopener">
@@ -216,20 +255,49 @@ footer span{color:var(--primary);font-weight:500}
 </span>
 <span class="card-arrow">→</span>
 </a>
-<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=Rawalpindi+Pakistan" target="_blank" rel="noopener">
+<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.5736891,73.0577348" target="_blank" rel="noopener">
 <span class="card-icon">📍</span>
 <span class="card-body">
-<span class="card-title">Abba Jee Kabar</span>
+    <span class="card-title">Abba Jee Kabar</span>
 </span>
 <span class="card-arrow">→</span>
 </a>
-<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=Rawalpindi+Pakistan" target="_blank" rel="noopener">
+<div class="collapse-wrap">
+<div class="collapse-inner">
+<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.572993,73.058607" target="_blank" rel="noopener">
 <span class="card-icon">📍</span>
 <span class="card-body">
 <span class="card-title">Waheed Uncle Kabar</span>
 </span>
 <span class="card-arrow">→</span>
 </a>
+<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=32.4901237,74.5321808" target="_blank" rel="noopener">
+<span class="card-icon">📍</span>
+<span class="card-body">
+<span class="card-title">Naseem Khala Kabar</span>
+</span>
+<span class="card-arrow">→</span>
+</a>
+<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=32.2570419,74.1628799" target="_blank" rel="noopener">
+<span class="card-icon">📍</span>
+<span class="card-body">
+<span class="card-title">Balkees Khala Kabar</span>
+</span>
+<span class="card-arrow">→</span>
+</a>
+<a role="listitem" class="location-card" href="https://www.google.com/maps/dir/?api=1&destination=33.562382,73.158249" target="_blank" rel="noopener">
+<span class="card-icon">📍</span>
+<span class="card-body">
+<span class="card-title">Jeela Khala Kabar</span>
+</span>
+<span class="card-arrow">→</span>
+</a>
+</div>
+<button class="collapse-toggle" aria-expanded="false">
+<span class="toggle-label">Show all (4 more)</span>
+<svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+</div>
 </div>
 </section>
 
@@ -237,6 +305,7 @@ footer span{color:var(--primary);font-weight:500}
 </div>
 <script>
 (function(){var t=document.documentElement;var b=document.getElementById("theme-toggle");var s=localStorage.getItem("ufd-theme");if(s){t.setAttribute("data-theme",s)}b.addEventListener("click",function(){var c=t.getAttribute("data-theme");var n=c==="light"?"dark":"light";t.setAttribute("data-theme",n);localStorage.setItem("ufd-theme",n)})})()
+;(function(){document.querySelectorAll(".collapse-toggle").forEach(function(btn){var label=btn.querySelector(".toggle-label");var orig=label.textContent;btn.addEventListener("click",function(){var wrap=this.parentElement;var isOpen=wrap.classList.toggle("is-open");this.setAttribute("aria-expanded",isOpen);var inner=wrap.querySelector(".collapse-inner");if(isOpen){inner.style.maxHeight=inner.scrollHeight+"px";label.textContent="Show less"}else{inner.style.maxHeight="0px";label.textContent=orig}})})})()
 </script>
 </body>
 </html>
