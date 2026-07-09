@@ -1,8 +1,6 @@
 # UFD Locations
 
-A family location directory. Tap an NFC tag at home to open a clean categorized list of important places — house addresses, hypermarkets, hospitals, kabristan — and navigate to any of them with Google Maps.
-
-Built for the family door. Tap and go.
+A family location directory. Tap an NFC tag at home to open a clean categorized list of important places — house addresses, hypermarkets, hospitals — and navigate to any of them with Google Maps.
 
 ## Usage
 
