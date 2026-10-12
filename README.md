@@ -1,6 +1,10 @@
 # UFD Locations
 
+[![Live demo](https://img.shields.io/badge/demo-live-brightgreen)](https://Dawnuser.github.io/UFD-Locations)
+
 A family location directory. Tap an NFC tag at home to open a clean categorized list of important places — house addresses, hypermarkets, hospitals — and navigate to any of them with Google Maps.
+
+**Live demo:** https://Dawnuser.github.io/UFD-Locations
 
 ## Usage
 
