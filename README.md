@@ -2,7 +2,7 @@
 
 [![Live demo](https://img.shields.io/badge/demo-live-brightgreen)](https://Dawnuser.github.io/UFD-Locations)
 
-A family location directory. Tap an NFC tag at home to open a clean categorized list of important places — house addresses, hypermarkets, hospitals — and navigate to any of them with Google Maps.
+A family location directory. Tap an NFC tag at home to open a clean categorized list of important places  -  house addresses, hypermarkets, hospitals  -  and navigate to any of them with Google Maps.
 
 **Live demo:** https://Dawnuser.github.io/UFD-Locations
 
@@ -14,16 +14,16 @@ A family location directory. Tap an NFC tag at home to open a clean categorized 
 
 ## Files
 
-- `index.html` — Categorized view with collapsible sections (default)
-- `emoji-list.html` — Flat list with emoji markers
-- `categorized.html` — Same categorized view as index (reference)
+- `index.html`  -  Categorized view with collapsible sections (default)
+- `emoji-list.html`  -  Flat list with emoji markers
+- `categorized.html`  -  Same categorized view as index (reference)
 
 Each category shows the first 2 locations by default. Tap **Show all (N more)** to expand the rest.
 
 ## Features
 
 - Dark/light theme toggle (persisted in localStorage)
-- Collapsible sections — tap to show/hide extra locations
+- Collapsible sections  -  tap to show/hide extra locations
 - Mobile-first, 520px max-width
 - Google Maps directions via `maps.google.com/maps/dir/`
 
